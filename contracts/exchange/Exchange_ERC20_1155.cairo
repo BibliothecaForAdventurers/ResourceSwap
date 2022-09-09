@@ -21,7 +21,7 @@ from starkware.cairo.common.uint256 import (
 )
 
 from openzeppelin.token.erc20.IERC20 import IERC20
-from contracts.settling_game.interfaces.IERC1155 import IERC1155
+from contracts.interfaces.IERC1155 import IERC1155
 
 from contracts.token.constants import (
     IERC1155_ID,
@@ -110,7 +110,6 @@ end
 
 @external
 func initializer{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
-    uri : felt,
     currency_address_ : felt,
     token_address_ : felt,
     lp_fee_thousands_ : Uint256,
@@ -118,7 +117,7 @@ func initializer{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_p
     royalty_fee_address_ : felt,
     proxy_admin : felt,
 ):
-    ERC1155.initializer(uri)
+    ERC1155.initializer()
     currency_address.write(currency_address_)
     token_address.write(token_address_)
     lp_fee_thousands.write(lp_fee_thousands_)
@@ -1083,8 +1082,8 @@ func supportsInterface{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_c
 end
 
 @view
-func uri{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}() -> (uri : felt):
-    return ERC1155.uri()
+func token_uri{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(token_id : Uint256) -> (token_uri : felt):
+    return ERC1155.token_uri(token_id)
 end
 
 @view

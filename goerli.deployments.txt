@@ -1,0 +1,4 @@
+0x0061a07da912ee6953dcdb1963e7b3361f2304dacc633d1d7fb4ba29f25d3b0d:/usr/local/lib/python3.7/site-packages/nile/artifacts/abis/Account.json:account-0
+0x05700Ef55012cD0fCf132B5d2693b01c3E1eb690A8ea23a05ad7Fcb07A1EEfC8:/usr/local/lib/python3.7/site-packages/nile/artifacts/abis/Account.json:account-1
+0x029f1c0ba2128c704acac85451593487def5f2e6a28b92e84392c1821b062ac0:artifacts/abis/PROXY_Logic.json:proxy_lords
+0x030e7c02c7936b05905faf745a57d7eabb2575317ed9fbb4be460dd8b1ed3777:artifacts/abis/PROXY_Logic.json:proxy_resources

@@ -7,7 +7,7 @@ from starkware.cairo.common.cairo_builtins import HashBuiltin
 from starkware.starknet.common.syscalls import library_call, library_call_l1_handler
 
 # temporary solution
-from contracts.settling_game.proxy.library import Proxy
+from contracts.proxy.library import Proxy
 
 #
 # Constructor

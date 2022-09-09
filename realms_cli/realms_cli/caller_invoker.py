@@ -31,6 +31,8 @@ def send_multi(self, to, method, calldata, nonce=None):
     params.append(str(len(calldata)))
     params.extend([str(param) for param in calldata])
     params.append(str(nonce))
+    
+    print(self.address, params, self.network, str(sig_r), str(sig_s))
 
     return call_or_invoke(
         contract=self.address,
